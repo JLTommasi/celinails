@@ -917,6 +917,15 @@ footer a img:hover{
     
 }
 
+@media screen and (max-width: 833px){
+    .titulo{
+        flex-direction: column;
+    }
+    
+    .titulo .navegacion nav ul li{
+        margin: 5px;
+    }
+}
 @media screen and (max-width: 820px){
     .gridTrabajos{
         grid-template-columns: 1fr 1fr;
@@ -932,14 +941,18 @@ footer a img:hover{
 }
 
 
-@media screen and (max-width: 724px){
+/*@media screen and (max-width: 724px){
     .titulo{
         flex-direction: column;
     }
     
-}
+}*/
 
 @media screen and (max-width: 700px){
+    .titulo .navegacion nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
     .cursos  div h2 {
         font-size: 40px;
     }
@@ -948,15 +961,6 @@ footer a img:hover{
     }
 }
 
-@media screen and (max-width: 670px){
-    .titulo .navegacion nav ul{
-        flex-direction: column;
-        text-align: center;
-    }
-    .titulo .navegacion nav ul li{
-        margin: 5px;
-    }
-}
 
 @media screen and (max-width: 630px){
     footer {
