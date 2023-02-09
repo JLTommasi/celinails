@@ -1,0 +1,43 @@
+/*-------HEADER--------*/
+header{
+    background-color: rgb(80, 165, 250);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        a{
+            img{
+                margin: 10px;
+                width: 100px;
+                height: 100%;
+                transition: 1s;
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 2px 1px 24px 3px rgba(214,247,84,0.75);
+                    -webkit-box-shadow: 2px 1px 24px 3px rgba(214,247,84,0.75);
+                    -moz-box-shadow: 2px 1px 24px 3px rgba(214,247,84,0.75);
+                }
+            }
+        }
+    }
+    .navegacion{
+        nav{
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                    margin: 10px;
+                    a{text-decoration: none;
+                        color:deeppink;
+                        transition: 1s;
+                        &:hover{
+                            background-color: rgb(252, 252, 77);
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
