@@ -1,0 +1,29 @@
+//*--LISTAS--*/
+
+$colores: 
+rgb(80, 165, 250),
+deeppink,
+blueviolet,
+palevioletred,
+rgb(253, 146, 217),
+rgb(158, 62, 248);
+
+
+//*--EXTEND--*/
+
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+//*--MIXIN--*/
+
+@mixin flex ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+

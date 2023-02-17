@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;1,300&family=Rowdies:wght@300;400;700&display=swap");
 * {
   margin: 0;
@@ -6,6 +7,12 @@
 
 body {
   font-family: 'Rowdies', cursive; }
+
+.hero, .secundaria .secundariaCursos, .secundaria .secundariaTrabajos, .contactanos form, .cursos, .cursos .cursosManicuria, .cursos .cursosAcrilicas, .cursos .cursosSemipermanentes, .cursos .cursosTechgel, .gridProductos .celeste, .gridProductos .negro, .gridProductos .rojo, .gridProductos .rosa, .gridProductos .deco1, .gridProductos .deco2, .gridProductos .deco3, .gridProductos .deco4, .gridProductos .cabina, .gridProductos .torno, .gridProductos .equip1, .gridProductos .equip2, .gridProductos .acces1, .gridProductos .acces2, .gridProductos .acces3, .gridProductos .acces4, .gridTrabajos .trabajos1, .gridTrabajos .trabajos2, .gridTrabajos .trabajos3, .gridTrabajos .trabajos4, .gridTrabajos .trabajos5, .gridTrabajos .trabajos6, .gridTrabajos .trabajos7, .gridTrabajos .trabajos8, .gridTrabajos .trabajos9, .gridTrabajos .trabajos10, footer .texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 /*-------HEADER--------*/
 header {
@@ -26,7 +33,9 @@ header {
       -moz-box-shadow: 2px 1px 24px 3px rgba(214, 247, 84, 0.75); }
   header .navegacion nav ul {
     display: flex;
-    list-style: none; }
+    list-style: none;
+    padding: 0;
+    margin: 0; }
     header .navegacion nav ul li {
       margin: 10px; }
       header .navegacion nav ul li a {
@@ -46,10 +55,6 @@ header {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center; }
   .hero h1 {
     color: blueviolet;
@@ -71,12 +76,19 @@ header {
       color: #fafa5d;
       transform: scale(1.1); }
 
+@keyframes celinails {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
+
 .secundaria {
   text-align: center;
   border: 1px solid black;
   height: 400px;
   width: 100%;
-  background-color: #f831b6;
   display: flex;
   justify-content: center; }
   .secundaria .secundariaCursos {
@@ -87,10 +99,6 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap; }
     .secundaria .secundariaCursos p {
       font-size: 30px;
@@ -99,9 +107,9 @@ header {
     .secundaria .secundariaCursos a {
       text-decoration: none;
       font-size: 30px;
-      background-color: #f831b6;
+      background-color: #fd92d9;
       padding: 5px 10px;
-      color: purple;
+      color: blueviolet;
       border: 2px solid black;
       transition: 1s; }
       .secundaria .secundariaCursos a:hover {
@@ -114,10 +122,6 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap; }
     .secundaria .secundariaTrabajos p {
       font-size: 30px;
@@ -126,9 +130,9 @@ header {
     .secundaria .secundariaTrabajos a {
       text-decoration: none;
       font-size: 30px;
-      background-color: #f831b6;
+      background-color: #fd92d9;
       padding: 5px 10px;
-      color: purple;
+      color: blueviolet;
       border: 2px solid black;
       transition: 1s; }
       .secundaria .secundariaTrabajos a:hover {
@@ -138,9 +142,10 @@ header {
   text-align: center;
   background-color: #9e3ef8;
   padding: 15px;
+  margin: 0;
   font-size: 50px; }
   .productos h2 a {
-    color: #fa2ab5;
+    color: #fd92d9;
     text-decoration: none;
     background-color: black;
     padding: 5px 10px;
@@ -173,6 +178,718 @@ header {
       text-decoration: none;
       color: #fa2ab5; }
 
+/*--------------CONTACTANOS--------------*/
+.contactanos {
+  background-image: url("../img/IMG-20230108-WA0027.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .contactanos h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    height: 100px;
+    width: 100%;
+    background-color: #f888c4; }
+  .contactanos form {
+    width: 60%; }
+    .contactanos form .genero {
+      display: flex;
+      flex-direction: column; }
+      .contactanos form .genero h2 {
+        font-size: 25px; }
+      .contactanos form .genero label {
+        font-size: 20px; }
+    .contactanos form .campo {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      .contactanos form .campo h2 {
+        font-size: 25px; }
+      .contactanos form .campo label {
+        font-size: 20px; }
+    .contactanos form .contactanosComentarios h2 {
+      margin-top: 30px; }
+    .contactanos form .botones input {
+      background-color: black;
+      color: white;
+      width: 90px;
+      height: 30px; }
+
+/*------------CURSOS----------*/
+.cursos .cursosTitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  color: #fd89c7;
+  background-color: blueviolet; }
+  .cursos .cursosTitulo h1 {
+    border: 2px solid #fcfc59;
+    padding: 5px; }
+
+.cursos .cursosManicuria {
+  background-image: url("../img/manicuriaintegralcurso.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+  text-align: center; }
+  .cursos .cursosManicuria h2 {
+    color: blueviolet;
+    font-size: 60px;
+    margin-bottom: 50px; }
+  .cursos .cursosManicuria a {
+    text-decoration: none;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+    transition: 1s; }
+    .cursos .cursosManicuria a:hover {
+      color: #fafa5d;
+      transform: scale(1.1); }
+
+.cursos .cursosAcrilicas {
+  background-image: url("../img/uñasacrilicas.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  text-align: center; }
+  .cursos .cursosAcrilicas h2 {
+    color: blueviolet;
+    font-size: 60px;
+    margin-bottom: 50px; }
+  .cursos .cursosAcrilicas a {
+    text-decoration: none;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+    transition: 1s; }
+    .cursos .cursosAcrilicas a:hover {
+      color: #fafa5d;
+      transform: scale(1.1); }
+
+.cursos .cursosSemipermanentes {
+  background-image: url("../img/semipermanentescurso.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  text-align: center; }
+  .cursos .cursosSemipermanentes h2 {
+    color: blueviolet;
+    font-size: 60px;
+    margin-bottom: 50px; }
+  .cursos .cursosSemipermanentes a {
+    text-decoration: none;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+    transition: 1s; }
+    .cursos .cursosSemipermanentes a:hover {
+      color: #fafa5d;
+      transform: scale(1.1); }
+
+.cursos .cursosTechgel {
+  background-image: url("../img/techgelcurso.jpg_large");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  text-align: center; }
+  .cursos .cursosTechgel h2 {
+    color: blueviolet;
+    font-size: 60px;
+    margin-bottom: 50px; }
+  .cursos .cursosTechgel a {
+    text-decoration: none;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+    transition: 1s; }
+    .cursos .cursosTechgel a:hover {
+      color: #fafa5d;
+      transform: scale(1.1); }
+
+/*-----------PRODUCTOS-----------*/
+.gridProductos {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 300px 150px 300px 150px 300px 150px 300px;
+  column-gap: 10px;
+  grid-template-areas: "esmaltes esmaltes esmaltes esmaltes" "celeste negro rojo rosa" "decoracion decoracion decoracion decoracion" "deco1 deco2 deco3 deco4" "equip equip equip equip" "cabina torno equip1 equip2" "accesorios accesorios accesorios accesorios" "acces1 acces2 acces3 acces4"; }
+  .gridProductos .esmaltesTitulo {
+    background-color: blueviolet;
+    grid-area: esmaltes;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gridProductos .esmaltesTitulo h2 {
+      color: deeppink;
+      border: 2px solid yellow;
+      padding: 10px;
+      font-size: 50px; }
+  .gridProductos .celeste {
+    grid-area: celeste;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .celeste img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .celeste a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .celeste a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .negro {
+    grid-area: negro;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .negro img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .negro a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .negro a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .rojo {
+    grid-area: rojo;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .rojo img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .rojo a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .rojo a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .rosa {
+    grid-area: rosa;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .rosa img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .rosa a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .rosa a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .decoracionTitulo {
+    background-color: blueviolet;
+    grid-area: decoracion;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gridProductos .decoracionTitulo h2 {
+      color: deeppink;
+      border: 2px solid yellow;
+      padding: 10px;
+      font-size: 50px; }
+  .gridProductos .deco1 {
+    grid-area: deco1;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .deco1 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .deco1 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .deco1 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .deco2 {
+    grid-area: deco2;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .deco2 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .deco2 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .deco2 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .deco3 {
+    grid-area: deco3;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .deco3 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .deco3 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .deco3 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .deco4 {
+    grid-area: deco4;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .deco4 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .deco4 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .deco4 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .equip {
+    grid-area: equip;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gridProductos .equip h2 {
+      color: deeppink;
+      border: 2px solid yellow;
+      padding: 10px;
+      font-size: 50px; }
+  .gridProductos .cabina {
+    grid-area: cabina;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .cabina img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .cabina a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .cabina a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .torno {
+    grid-area: torno;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .torno img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .torno a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .torno a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .equip1 {
+    grid-area: equip1;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .equip1 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .equip1 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .equip1 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .equip2 {
+    grid-area: equip2;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .equip2 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .equip2 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .equip2 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .accesoriosTitulo {
+    grid-area: accesorios;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gridProductos .accesoriosTitulo h2 {
+      color: deeppink;
+      border: 2px solid yellow;
+      padding: 10px;
+      font-size: 50px; }
+  .gridProductos .acces1 {
+    grid-area: acces1;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .acces1 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .acces1 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .acces1 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .acces2 {
+    grid-area: acces2;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .acces2 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .acces2 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .acces2 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .acces3 {
+    grid-area: acces3;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .acces3 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .acces3 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .acces3 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+  .gridProductos .acces4 {
+    grid-area: acces4;
+    border: 2px solid deeppink;
+    background-color: yellow; }
+    .gridProductos .acces4 img {
+      width: 250px;
+      height: 250px; }
+    .gridProductos .acces4 a {
+      text-decoration: none;
+      color: deeppink;
+      padding: 5px;
+      margin-top: 10px;
+      transition: 1s; }
+      .gridProductos .acces4 a:hover {
+        transform: scale(1.1);
+        background-color: black;
+        border-radius: 15%; }
+
+/*-----------TRABAJOS----------*/
+.gridTrabajos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px repeat(5, 400px);
+  grid-template-areas: "trabajosTitulo trabajosTitulo trabajosTitulo" "trabajos3 trabajos2 trabajos1" "trabajos3 trabajos5 trabajos4" "trabajos6 trabajos5 trabajos7" "trabajos8 trabajos9 trabajos7" "trabajos8 trabajos10 trabajos10";
+  width: 100%;
+  gap: 10px; }
+  .gridTrabajos .trabajosTitulo {
+    grid-area: trabajosTitulo;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    color: deeppink;
+    font-size: 30px;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajosTitulo h1 {
+      text-align: center;
+      border: 2px solid yellow; }
+  .gridTrabajos .trabajos1 {
+    grid-area: trabajos1;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos1 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos1 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos1 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos2 {
+    grid-area: trabajos2;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos2 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos2 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos2 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos3 {
+    grid-area: trabajos3;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos3 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos3 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos3 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos4 {
+    grid-area: trabajos4;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos4 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos4 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos4 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos5 {
+    grid-area: trabajos5;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos5 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos5 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos5 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos6 {
+    grid-area: trabajos6;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos6 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos6 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos6 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos7 {
+    grid-area: trabajos7;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos7 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos7 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos7 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos8 {
+    grid-area: trabajos8;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos8 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos8 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos8 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos9 {
+    grid-area: trabajos9;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos9 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos9 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos9 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+  .gridTrabajos .trabajos10 {
+    grid-area: trabajos10;
+    background-color: yellow;
+    border: 2px solid deeppink; }
+    .gridTrabajos .trabajos10 img {
+      width: 100%;
+      height: 92%; }
+    .gridTrabajos .trabajos10 a {
+      text-decoration: none;
+      margin-top: 5px;
+      color: deeppink;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s; }
+      .gridTrabajos .trabajos10 a:hover {
+        transform: scale(1.05);
+        background-color: black;
+        border-radius: 15%;
+        padding: 5px; }
+
 /*-------FOOTER--------*/
 footer {
   background-color: #50a5fa;
@@ -180,17 +897,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px; }
-  footer .texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    footer .texto h2 {
-      font-family: 'Rowdies', cursive;
-      font-size: 20px; }
-    footer .texto p {
-      font-family: 'Rowdies', cursive;
-      font-size: 10px; }
+  footer .texto h2 {
+    font-family: 'Rowdies', cursive;
+    font-size: 30px; }
+  footer .texto p {
+    font-family: 'Rowdies', cursive;
+    font-size: 20px; }
   footer iframe {
     width: 150px;
     height: 150px; }
@@ -208,6 +920,112 @@ footer {
     display: flex;
     align-items: flex-end; }
     footer a img {
+      width: 50px;
+      height: 50px;
       transition: 1s; }
       footer a img:hover {
         transform: scale(1.1); }
+
+/*---------MEDIAQUERY---------*/
+@media screen and (max-width: 1050px) {
+  .gridProductos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 300px 300px 150px 300px 300px 150px 300px 300px 150px 300px 300px;
+    grid-template-areas: "esmaltes esmaltes" "celeste negro" "rojo rosa" "decoracion decoracion" "deco1 deco2" "deco3 deco4" "equip equip" "cabina torno" "equip1 equip2" "accesorios accesorios" "acces1 acces2" "acces3 acces4"; } }
+
+@media screen and (max-width: 900px) {
+  .hero h1 {
+    font-size: 100px;
+    font-weight: 400; }
+  .hero p {
+    font-size: 25px; } }
+
+@media screen and (max-width: 833px) {
+  .titulo {
+    flex-direction: column; }
+    .titulo .navegacion nav ul li {
+      margin: 5px; } }
+
+@media screen and (max-width: 820px) {
+  .trabajos .gridTrabajos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px repeat(5, 400px);
+    grid-template-areas: "trabajosTitulo trabajosTitulo" "trabajos1 trabajos2" "trabajos3 trabajos4" "trabajos5 trabajos6" "trabajos7 trabajos8" "trabajos9 trabajos10"; } }
+
+@media screen and (max-width: 700px) {
+  .titulo .navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .titulo .navegacion nav ul {
+      flex-direction: column;
+      align-items: center; }
+  .cursos .cursosManicuria h2 {
+    font-size: 40px; }
+  .cursos .cursosManicuria a {
+    font-size: 30px; }
+  .cursos .cursosAcrilicas h2 {
+    font-size: 40px; }
+  .cursos .cursosAcrilicas a {
+    font-size: 30px; }
+  .cursos .cursosSemipermanentes h2 {
+    font-size: 40px; }
+  .cursos .cursosSemipermanentes a {
+    font-size: 30px; }
+  .cursos .cursosTechgel h2 {
+    font-size: 40px; }
+  .cursos .cursosTechgel a {
+    font-size: 30px; } }
+
+@media screen and (max-width: 697px) {
+  footer {
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (max-width: 608px) {
+  .secundaria {
+    flex-direction: column;
+    height: 800px; }
+    .secundaria .secundariaTrabajos {
+      width: 100%; }
+    .secundaria .secundariaCursos {
+      width: 100%; }
+  .productos h2 {
+    font-size: 30px; }
+  .gridProductos {
+    grid-template-columns: 100%;
+    grid-template-rows: 150px repeat(4, 300px) 150px repeat(4, 300px) 150px repeat(4, 300px) 150px repeat(4, 300px);
+    grid-template-areas: "esmaltes" "celeste" "negro" "rojo" "rosa" "decoracion" "deco1" "deco2" "deco3" "deco4" "equip" "cabina" "torno" "equip1" "equip2" "accesorios" "acces1" "acces2" "acces3" "acces4"; }
+    .gridProductos div h2 {
+      font-size: 30px; }
+  .trabajos .gridTrabajos {
+    grid-template-rows: 100px repeat(5, 400px); }
+    .trabajos .gridTrabajos .trabajosTitulo h1 {
+      font-size: 20px; } }
+
+@media screen and (max-width: 530px) {
+  .trabajos .gridTrabajos {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(10, 400px);
+    grid-template-areas: "trabajosTitulo" "trabajos1" "trabajos2" "trabajos3" "trabajos4" "trabajos5" "trabajos6" "trabajos7" "trabajos8" "trabajos9" "trabajos10"; } }
+
+@media screen and (max-width: 450px) {
+  .productos .productosGaleria {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
+  .cursos div h2 {
+    font-size: 30px; }
+  .cursos div a {
+    font-size: 20px; }
+  .gridProductos div {
+    width: 100%; } }
+
+@media screen and (max-width: 430px) {
+  .hero h1 {
+    font-size: 80px;
+    font-weight: 200; }
+  .hero p {
+    font-size: 20px; }
+  .productos .productosGaleria {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; } }
