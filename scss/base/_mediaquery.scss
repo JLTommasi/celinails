@@ -120,6 +120,15 @@
     }
 }
 
+@media screen and (max-width: 630px){
+    .productos{
+        .productosGaleria{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+
 @media screen and (max-width: 608px){
     .secundaria{
         flex-direction: column;
@@ -160,12 +169,29 @@
         "acces2"
         "acces3"
         "acces4";
-        div{
-            h2{
-                font-size: 30px;
+        .esmaltesTitulo{
+            h1{
+                font-size: 40px;
             }
         }
-    }
+        .decoracionTitulo{
+            h2{
+                font-size: 40px;
+            }
+        }
+        .equip{
+            h2{
+                font-size: 40px;
+            }
+        }
+        .accesoriosTitulo{
+            h2{
+                font-size: 40px;
+            }
+        }    
+        }    
+        
+    
     .trabajos{
         .gridTrabajos{
             grid-template-rows: 100px repeat(5,400px);
@@ -201,12 +227,6 @@
 }
 
 @media screen and (max-width: 450px){
-    .productos{
-        .productosGaleria{
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-        }
-    }
     .cursos{
         div{
             h2{

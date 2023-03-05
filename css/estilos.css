@@ -8,43 +8,27 @@
 body {
   font-family: 'Rowdies', cursive; }
 
-.hero, .secundaria .secundariaCursos, .secundaria .secundariaTrabajos, .contactanos form, .cursos, .cursos .cursosManicuria, .cursos .cursosAcrilicas, .cursos .cursosSemipermanentes, .cursos .cursosTechgel, .gridProductos .celeste, .gridProductos .negro, .gridProductos .rojo, .gridProductos .rosa, .gridProductos .deco1, .gridProductos .deco2, .gridProductos .deco3, .gridProductos .deco4, .gridProductos .cabina, .gridProductos .torno, .gridProductos .equip1, .gridProductos .equip2, .gridProductos .acces1, .gridProductos .acces2, .gridProductos .acces3, .gridProductos .acces4, .gridTrabajos .trabajos1, .gridTrabajos .trabajos2, .gridTrabajos .trabajos3, .gridTrabajos .trabajos4, .gridTrabajos .trabajos5, .gridTrabajos .trabajos6, .gridTrabajos .trabajos7, .gridTrabajos .trabajos8, .gridTrabajos .trabajos9, .gridTrabajos .trabajos10, footer .texto {
+.hero, .secundaria .secundariaCursos, .secundaria .secundariaTrabajos, .contactanos, .contactanos form, .cursos, .cursos .cursosManicuria, .cursos .cursosAcrilicas, .cursos .cursosSemipermanentes, .cursos .cursosTechgel, .gridProductos .celeste, .gridProductos .negro, .gridProductos .rojo, .gridProductos .rosa, .gridProductos .deco1, .gridProductos .deco2, .gridProductos .deco3, .gridProductos .deco4, .gridProductos .cabina, .gridProductos .torno, .gridProductos .equip1, .gridProductos .equip2, .gridProductos .acces1, .gridProductos .acces2, .gridProductos .acces3, .gridProductos .acces4, footer .texto {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; }
 
 /*-------HEADER--------*/
-header {
-  background-color: #50a5fa;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  header .logo a img {
-    margin: 10px;
+header .navbar {
+  color: black;
+  background-color: whitesmoke;
+  width: 100%; }
+  header .navbar .container-fluid .navbar-brand img {
     width: 100px;
-    height: 100%;
+    height: 100%; }
+  header .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+    padding: 10px;
+    color: black;
     transition: 1s; }
-    header .logo a img:hover {
-      transform: scale(1.1);
-      box-shadow: 2px 1px 24px 3px rgba(214, 247, 84, 0.75);
-      -webkit-box-shadow: 2px 1px 24px 3px rgba(214, 247, 84, 0.75);
-      -moz-box-shadow: 2px 1px 24px 3px rgba(214, 247, 84, 0.75); }
-  header .navegacion nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-    header .navegacion nav ul li {
-      margin: 10px; }
-      header .navegacion nav ul li a {
-        text-decoration: none;
-        color: deeppink;
-        transition: 1s; }
-        header .navegacion nav ul li a:hover {
-          background-color: #fcfc4d;
-          padding: 3px; }
+    header .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+      background-color: gainsboro;
+      transform: scale(1.05); }
 
 /*---------INDEX-----------*/
 .hero {
@@ -57,7 +41,7 @@ header {
   background-position: center;
   text-align: center; }
   .hero h1 {
-    color: blueviolet;
+    color: #fdcdd5;
     font-size: 200px;
     font-weight: 700;
     animation-duration: 2s;
@@ -68,12 +52,11 @@ header {
     margin-bottom: 15px; }
   .hero a {
     text-decoration: none;
-    background-color: blueviolet;
-    color: palevioletred;
+    background-color: #fdcdd5;
+    color: black;
     padding: 10px 10px;
     transition: 1s; }
     .hero a:hover {
-      color: #fafa5d;
       transform: scale(1.1); }
 
 @keyframes celinails {
@@ -92,95 +75,107 @@ header {
   display: flex;
   justify-content: center; }
   .secundaria .secundariaCursos {
-    background-image: url("../img/cursosimg.jpg");
+    background: linear-gradient(#e4e3e3, rgba(255, 192, 203, 0.048)), url("../img/cursosimg.jpg");
     width: 50%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     text-align: center;
     flex-wrap: wrap; }
     .secundaria .secundariaCursos p {
       font-size: 30px;
       margin-bottom: 20px;
-      padding: 5px; }
+      padding: 5px;
+      color: black; }
     .secundaria .secundariaCursos a {
       text-decoration: none;
       font-size: 30px;
-      background-color: #fd92d9;
+      background-color: #fdcdd5;
       padding: 5px 10px;
-      color: blueviolet;
+      color: black;
       border: 2px solid black;
       transition: 1s; }
       .secundaria .secundariaCursos a:hover {
         transform: scale(1.1); }
   .secundaria .secundariaTrabajos {
-    background-image: url("../img/fototrabajos.webp");
+    background: linear-gradient(#e4e3e3, rgba(255, 192, 203, 0.048)), url("../img/fototrabajos.webp");
     width: 50%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     text-align: center;
     flex-wrap: wrap; }
     .secundaria .secundariaTrabajos p {
       font-size: 30px;
       margin-bottom: 20px;
-      padding: 5px; }
+      padding: 5px;
+      color: black; }
     .secundaria .secundariaTrabajos a {
       text-decoration: none;
       font-size: 30px;
-      background-color: #fd92d9;
+      background-color: #fdcdd5;
       padding: 5px 10px;
-      color: blueviolet;
+      color: black;
       border: 2px solid black;
       transition: 1s; }
       .secundaria .secundariaTrabajos a:hover {
         transform: scale(1.1); }
 
-.productos h2 {
-  text-align: center;
-  background-color: #9e3ef8;
-  padding: 15px;
-  margin: 0;
-  font-size: 50px; }
-  .productos h2 a {
-    color: #fd92d9;
-    text-decoration: none;
-    background-color: black;
-    padding: 5px 10px;
-    transition: 1s; }
-    .productos h2 a:hover {
-      color: #fafa5d; }
-
-.productos .productosGaleria {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 25px;
-  text-align: center;
-  background-color: #9e3ef8; }
-  .productos .productosGaleria div {
-    border: 2px solid black;
-    width: 100%;
-    height: 280px;
-    background-color: yellow;
-    transition: 2s; }
-    .productos .productosGaleria div:hover {
-      transform: scale(1.05);
-      box-shadow: 2px 1px 24px 3px rgba(223, 250, 58, 0.75);
-      -webkit-box-shadow: 2px 1px 24px 3px rgba(223, 250, 58, 0.75);
-      -moz-box-shadow: 2px 1px 24px 3px rgba(223, 250, 58, 0.75); }
-    .productos .productosGaleria div img {
-      width: 100%;
-      height: 250px; }
-    .productos .productosGaleria div h3 a {
+.productos {
+  background-color: #fdcdd5; }
+  .productos h2 {
+    text-align: center;
+    height: 180px;
+    padding: 15px;
+    margin: 0;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .productos h2 a {
+      color: black;
       text-decoration: none;
-      color: #fa2ab5; }
+      background-color: #fdcdd5;
+      padding: 5px 10px;
+      transition: 2s; }
+      .productos h2 a:hover {
+        transform: scale(1.05);
+        box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75); }
+  .productos .productosGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    text-align: center; }
+    .productos .productosGaleria div {
+      width: 80%;
+      margin: auto;
+      height: 280px;
+      background-color: #fdcdd5;
+      transition: 2s; }
+      .productos .productosGaleria div:hover {
+        transform: scale(1.05);
+        box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 3px 16px 12px rgba(0, 0, 0, 0.75); }
+      .productos .productosGaleria div img {
+        width: 80%;
+        height: 230px;
+        margin-bottom: 5px;
+        border-radius: 10%; }
+      .productos .productosGaleria div h3 a {
+        text-decoration: none;
+        color: black; }
 
 /*--------------CONTACTANOS--------------*/
 .contactanos {
-  background-image: url("../img/IMG-20230108-WA0027.jpg");
+  background: linear-gradient(#e4e3e3, rgba(255, 192, 203, 0.048)), url("../img/IMG-20230108-WA0027.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -188,11 +183,7 @@ header {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  color: black; }
   .contactanos h1 {
     display: flex;
     justify-content: center;
@@ -200,7 +191,7 @@ header {
     margin-bottom: 50px;
     height: 100px;
     width: 100%;
-    background-color: #f888c4; }
+    background-color: #fdcdd5; }
   .contactanos form {
     width: 60%; }
     .contactanos form .genero {
@@ -231,16 +222,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
-  height: 100px;
-  color: #fd89c7;
-  background-color: blueviolet; }
+  height: 150px;
+  color: whitesmoke;
+  background-color: #9f56e2; }
   .cursos .cursosTitulo h1 {
-    border: 2px solid #fcfc59;
     padding: 5px; }
 
 .cursos .cursosManicuria {
-  background-image: url("../img/manicuriaintegralcurso.webp");
+  background: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.322)), url("../img/manicuriaintegralcurso.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -248,22 +239,21 @@ header {
   width: 100%;
   text-align: center; }
   .cursos .cursosManicuria h2 {
-    color: blueviolet;
+    color: whitesmoke;
     font-size: 60px;
     margin-bottom: 50px; }
   .cursos .cursosManicuria a {
     text-decoration: none;
     font-size: 40px;
-    background-color: blueviolet;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: whitesmoke;
+    padding: 5px;
     transition: 1s; }
     .cursos .cursosManicuria a:hover {
-      color: #fafa5d;
+      color: #fafa7b;
       transform: scale(1.1); }
 
 .cursos .cursosAcrilicas {
-  background-image: url("../img/uñasacrilicas.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.322)), url("../img/uñasacrilicas.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -271,22 +261,21 @@ header {
   width: 100%;
   text-align: center; }
   .cursos .cursosAcrilicas h2 {
-    color: blueviolet;
+    color: whitesmoke;
     font-size: 60px;
     margin-bottom: 50px; }
   .cursos .cursosAcrilicas a {
     text-decoration: none;
     font-size: 40px;
-    background-color: blueviolet;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: whitesmoke;
+    padding: 5px;
     transition: 1s; }
     .cursos .cursosAcrilicas a:hover {
-      color: #fafa5d;
+      color: #fafa7b;
       transform: scale(1.1); }
 
 .cursos .cursosSemipermanentes {
-  background-image: url("../img/semipermanentescurso.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.322)), url("../img/semipermanentescurso.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -294,22 +283,21 @@ header {
   width: 100%;
   text-align: center; }
   .cursos .cursosSemipermanentes h2 {
-    color: blueviolet;
+    color: whitesmoke;
     font-size: 60px;
     margin-bottom: 50px; }
   .cursos .cursosSemipermanentes a {
     text-decoration: none;
     font-size: 40px;
-    background-color: blueviolet;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: whitesmoke;
+    padding: 5px;
     transition: 1s; }
     .cursos .cursosSemipermanentes a:hover {
-      color: #fafa5d;
+      color: #fafa7b;
       transform: scale(1.1); }
 
 .cursos .cursosTechgel {
-  background-image: url("../img/techgelcurso.jpg_large");
+  background: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.322)), url("../img/techgelcurso.jpg_large");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -317,22 +305,22 @@ header {
   width: 100%;
   text-align: center; }
   .cursos .cursosTechgel h2 {
-    color: blueviolet;
+    color: whitesmoke;
     font-size: 60px;
     margin-bottom: 50px; }
   .cursos .cursosTechgel a {
     text-decoration: none;
     font-size: 40px;
-    background-color: blueviolet;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: whitesmoke;
+    padding: 5px;
     transition: 1s; }
     .cursos .cursosTechgel a:hover {
-      color: #fafa5d;
+      color: #fafa7b;
       transform: scale(1.1); }
 
 /*-----------PRODUCTOS-----------*/
 .gridProductos {
+  background-color: whitesmoke;
   display: grid;
   width: 100%;
   margin: 0 auto;
@@ -341,324 +329,305 @@ header {
   column-gap: 10px;
   grid-template-areas: "esmaltes esmaltes esmaltes esmaltes" "celeste negro rojo rosa" "decoracion decoracion decoracion decoracion" "deco1 deco2 deco3 deco4" "equip equip equip equip" "cabina torno equip1 equip2" "accesorios accesorios accesorios accesorios" "acces1 acces2 acces3 acces4"; }
   .gridProductos .esmaltesTitulo {
-    background-color: blueviolet;
+    background-color: #9f56e2;
     grid-area: esmaltes;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .gridProductos .esmaltesTitulo h2 {
-      color: deeppink;
-      border: 2px solid yellow;
+    .gridProductos .esmaltesTitulo h1 {
+      color: #fdcdd5;
       padding: 10px;
       font-size: 50px; }
   .gridProductos .celeste {
     grid-area: celeste;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .celeste img {
       width: 250px;
       height: 250px; }
     .gridProductos .celeste a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .celeste a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .negro {
     grid-area: negro;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .negro img {
       width: 250px;
       height: 250px; }
     .gridProductos .negro a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .negro a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .rojo {
     grid-area: rojo;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .rojo img {
       width: 250px;
       height: 250px; }
     .gridProductos .rojo a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .rojo a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .rosa {
     grid-area: rosa;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .rosa img {
       width: 250px;
       height: 250px; }
     .gridProductos .rosa a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .rosa a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .decoracionTitulo {
-    background-color: blueviolet;
+    background-color: #9f56e2;
     grid-area: decoracion;
     display: flex;
     justify-content: center;
     align-items: center; }
     .gridProductos .decoracionTitulo h2 {
-      color: deeppink;
-      border: 2px solid yellow;
+      color: #fdcdd5;
       padding: 10px;
       font-size: 50px; }
   .gridProductos .deco1 {
     grid-area: deco1;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .deco1 img {
       width: 250px;
       height: 250px; }
     .gridProductos .deco1 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .deco1 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .deco2 {
     grid-area: deco2;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .deco2 img {
       width: 250px;
       height: 250px; }
     .gridProductos .deco2 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .deco2 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .deco3 {
     grid-area: deco3;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .deco3 img {
       width: 250px;
       height: 250px; }
     .gridProductos .deco3 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .deco3 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .deco4 {
     grid-area: deco4;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .deco4 img {
       width: 250px;
       height: 250px; }
     .gridProductos .deco4 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .deco4 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .equip {
     grid-area: equip;
-    background-color: blueviolet;
+    background-color: #9f56e2;
     display: flex;
     justify-content: center;
     align-items: center; }
     .gridProductos .equip h2 {
-      color: deeppink;
-      border: 2px solid yellow;
+      color: #fdcdd5;
       padding: 10px;
       font-size: 50px; }
   .gridProductos .cabina {
     grid-area: cabina;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .cabina img {
       width: 250px;
       height: 250px; }
     .gridProductos .cabina a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .cabina a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .torno {
     grid-area: torno;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .torno img {
       width: 250px;
       height: 250px; }
     .gridProductos .torno a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .torno a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .equip1 {
     grid-area: equip1;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .equip1 img {
       width: 250px;
       height: 250px; }
     .gridProductos .equip1 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .equip1 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .equip2 {
     grid-area: equip2;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .equip2 img {
       width: 250px;
       height: 250px; }
     .gridProductos .equip2 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .equip2 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .accesoriosTitulo {
     grid-area: accesorios;
-    background-color: blueviolet;
+    background-color: #9f56e2;
     display: flex;
     justify-content: center;
     align-items: center; }
     .gridProductos .accesoriosTitulo h2 {
-      color: deeppink;
-      border: 2px solid yellow;
+      color: #fdcdd5;
       padding: 10px;
       font-size: 50px; }
   .gridProductos .acces1 {
     grid-area: acces1;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .acces1 img {
       width: 250px;
       height: 250px; }
     .gridProductos .acces1 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .acces1 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .acces2 {
     grid-area: acces2;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .acces2 img {
       width: 250px;
       height: 250px; }
     .gridProductos .acces2 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .acces2 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .acces3 {
     grid-area: acces3;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .acces3 img {
       width: 250px;
       height: 250px; }
     .gridProductos .acces3 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .acces3 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
   .gridProductos .acces4 {
     grid-area: acces4;
-    border: 2px solid deeppink;
-    background-color: yellow; }
+    background-color: #fdcdd5; }
     .gridProductos .acces4 img {
       width: 250px;
       height: 250px; }
     .gridProductos .acces4 a {
       text-decoration: none;
-      color: deeppink;
+      color: #9f56e2;
       padding: 5px;
       margin-top: 10px;
       transition: 1s; }
       .gridProductos .acces4 a:hover {
         transform: scale(1.1);
-        background-color: black;
+        background-color: whitesmoke;
         border-radius: 15%; }
 
 /*-----------TRABAJOS----------*/
 .gridTrabajos {
+  background-color: whitesmoke;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 150px repeat(5, 400px);
@@ -672,237 +641,247 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
-    color: deeppink;
-    font-size: 30px;
-    border: 2px solid deeppink; }
+    background-color: #9f56e2;
+    color: #fdcdd5;
+    font-size: 30px; }
     .gridTrabajos .trabajosTitulo h1 {
-      text-align: center;
-      border: 2px solid yellow; }
+      text-align: center; }
   .gridTrabajos .trabajos1 {
     grid-area: trabajos1;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos1 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosuno.webp");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos1 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos1 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos2 {
     grid-area: trabajos2;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos2 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosdos.webp");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos2 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos2 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos3 {
     grid-area: trabajos3;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos3 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajostres.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos3 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos3 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos4 {
     grid-area: trabajos4;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos4 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajoscuatro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos4 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos4 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos5 {
     grid-area: trabajos5;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos5 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajoscinco.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos5 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos5 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos6 {
     grid-area: trabajos6;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos6 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosseis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos6 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos6 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos7 {
     grid-area: trabajos7;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos7 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajossiete.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos7 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos7 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos8 {
     grid-area: trabajos8;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos8 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosocho.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos8 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos8 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos9 {
     grid-area: trabajos9;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos9 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosnueve.webp");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos9 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos9 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
   .gridTrabajos .trabajos10 {
     grid-area: trabajos10;
-    background-color: yellow;
-    border: 2px solid deeppink; }
-    .gridTrabajos .trabajos10 img {
-      width: 100%;
-      height: 92%; }
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/trabajosdiez.webp");
+    background-size: cover;
+    background-repeat: no-repeat; }
     .gridTrabajos .trabajos10 a {
       text-decoration: none;
-      margin-top: 5px;
-      color: deeppink;
-      height: 8%;
+      margin-bottom: 5px;
+      background-color: #9f56e2;
+      color: #fdcdd5;
+      padding: 5px;
+      border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 1s; }
       .gridTrabajos .trabajos10 a:hover {
         transform: scale(1.05);
-        background-color: black;
-        border-radius: 15%;
-        padding: 5px; }
+        color: #fafa7b; }
 
 /*-------FOOTER--------*/
 footer {
-  background-color: #50a5fa;
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px; }
   footer .texto h2 {
     font-family: 'Rowdies', cursive;
-    font-size: 30px; }
+    font-size: 30px;
+    color: black; }
   footer .texto p {
     font-family: 'Rowdies', cursive;
-    font-size: 20px; }
+    font-size: 20px;
+    color: black; }
   footer iframe {
     width: 150px;
     height: 150px; }
@@ -982,6 +961,11 @@ footer {
     flex-direction: column;
     align-items: center; } }
 
+@media screen and (max-width: 630px) {
+  .productos .productosGaleria {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; } }
+
 @media screen and (max-width: 608px) {
   .secundaria {
     flex-direction: column;
@@ -996,8 +980,14 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: 150px repeat(4, 300px) 150px repeat(4, 300px) 150px repeat(4, 300px) 150px repeat(4, 300px);
     grid-template-areas: "esmaltes" "celeste" "negro" "rojo" "rosa" "decoracion" "deco1" "deco2" "deco3" "deco4" "equip" "cabina" "torno" "equip1" "equip2" "accesorios" "acces1" "acces2" "acces3" "acces4"; }
-    .gridProductos div h2 {
-      font-size: 30px; }
+    .gridProductos .esmaltesTitulo h1 {
+      font-size: 40px; }
+    .gridProductos .decoracionTitulo h2 {
+      font-size: 40px; }
+    .gridProductos .equip h2 {
+      font-size: 40px; }
+    .gridProductos .accesoriosTitulo h2 {
+      font-size: 40px; }
   .trabajos .gridTrabajos {
     grid-template-rows: 100px repeat(5, 400px); }
     .trabajos .gridTrabajos .trabajosTitulo h1 {
@@ -1010,9 +1000,6 @@ footer {
     grid-template-areas: "trabajosTitulo" "trabajos1" "trabajos2" "trabajos3" "trabajos4" "trabajos5" "trabajos6" "trabajos7" "trabajos8" "trabajos9" "trabajos10"; } }
 
 @media screen and (max-width: 450px) {
-  .productos .productosGaleria {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; }
   .cursos div h2 {
     font-size: 30px; }
   .cursos div a {

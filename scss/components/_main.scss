@@ -11,7 +11,7 @@
         @extend %flex;
         text-align: center;
         h1{
-            color: nth($colores, 3);
+            color: nth($colores, 4);
             font-size: 200px;
             font-weight: 700;
             animation-duration: 2s;
@@ -24,12 +24,11 @@
         }
         a{
             text-decoration: none;
-            background-color: nth($colores, 3);
-            color: nth($colores, 4);
+            background-color: nth($colores, 4);
+            color: nth($colores, 2);
             padding: 10px 10px;
             transition: 1s;
             &:hover{
-                color: rgb(250, 250, 93);
                 transform: scale(1.1);
             }
 
@@ -47,18 +46,19 @@
     }
     .secundaria{
         text-align: center;
-        border: 1px solid black;
+        border: 1px solid nth($colores, 2);
         height: 400px;
         width: 100%;
         display: flex;
         justify-content: center;
         .secundariaCursos{
-            background-image: url("../img/cursosimg.jpg");
+            background: linear-gradient(rgb(228, 227, 227), rgba(255, 192, 203, 0.048)), url("../img/cursosimg.jpg");
             width: 50%;
             height: 100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            background-attachment: fixed;
             text-align: center;
             @extend %flex;
             flex-wrap: wrap;
@@ -66,15 +66,16 @@
                 font-size: 30px;
                 margin-bottom: 20px;    
                 padding: 5px;
+                color: nth($colores, 2);
 
             }
             a{
                 text-decoration: none;
                 font-size: 30px;
-                background-color: nth($colores, 5);
+                background-color: nth($colores, 4);
                 padding: 5px 10px;
-                color: nth($colores, 3);
-                border: 2px solid black;
+                color: nth($colores, 2);
+                border: 2px solid nth($colores, 2);
                 transition: 1s;
                 &:hover{
                     transform: scale(1.1);
@@ -83,12 +84,13 @@
             }
         }
         .secundariaTrabajos{
-            background-image: url("../img/fototrabajos.webp");
+            background: linear-gradient(rgb(228, 227, 227), rgba(255, 192, 203, 0.048)), url("../img/fototrabajos.webp");
             width: 50%;
             height: 100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            background-attachment: fixed;
             text-align: center;
             @extend %flex;
             flex-wrap: wrap;
@@ -96,14 +98,15 @@
                 font-size: 30px;
                 margin-bottom: 20px;
                 padding: 5px;
+                color: nth($colores, 2);
             }
             a{
                 text-decoration: none;
                 font-size: 30px;
-                background-color: nth($colores, 5);
+                background-color: nth($colores, 4);
                 padding: 5px 10px;
-                color: nth($colores, 3);
-                border: 2px solid black;
+                color: nth($colores, 2);
+                border: 2px solid nth($colores, 2);
                 transition: 1s;
                 &:hover{
                     transform: scale(1.1);
@@ -114,19 +117,25 @@
 
     }
     .productos{
+        background-color: nth($colores, 4);
         h2{
-            text-align: center;;
-            background-color: nth($colores, 6);
+            text-align: center;
+            height: 180px;
             padding: 15px;
             margin: 0;
             font-size: 50px;
-            a{color:rgb(253, 146, 217);
+            @include flex (flex, center, center);
+            a{color: nth($colores, 2);
                 text-decoration: none;
-                background-color: black;
+                background-color: nth($colores, 4);
                 padding: 5px 10px;
-                transition: 1s;
+                transition: 2s;
                 &:hover{
-                    color: rgb(250, 250, 93)}
+                    transform: scale(1.05);
+                    box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
+                    -moz-box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
+                }
             }
         }
         .productosGaleria{
@@ -135,27 +144,29 @@
             grid-template-rows: 1fr 1fr;
             gap: 25px;
             text-align: center;
-            background-color: nth($colores, 6);
+
             div{
-                border: 2px solid black;
-                width: 100%;
+                width: 80%;
+                margin: auto;
                 height: 280px;
-                background-color: yellow;
+                background-color: nth($colores, 4);
                 transition: 2s;
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 2px 1px 24px 3px rgba(223,250,58,0.75);
-                    -webkit-box-shadow: 2px 1px 24px 3px rgba(223,250,58,0.75);
-                    -moz-box-shadow: 2px 1px 24px 3px rgba(223,250,58,0.75);
+                    box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
+                    -moz-box-shadow: -1px 3px 16px 12px rgba(0,0,0,0.75);
                 }
                 img{
-                    width: 100%;
-                    height: 250px;
+                    width: 80%;
+                    height: 230px;
+                    margin-bottom: 5px;
+                    border-radius: 10%;
                 }
                 h3{
                     a{
                         text-decoration: none;
-                        color: rgb(250, 42, 181);
+                        color: nth($colores, 2);
                     }
                 }
             }
@@ -164,7 +175,7 @@
 
 /*--------------CONTACTANOS--------------*/
 .contactanos{
-    background-image: url("../img/IMG-20230108-WA0027.jpg");
+    background: linear-gradient(rgb(228, 227, 227), rgba(255, 192, 203, 0.048)), url("../img/IMG-20230108-WA0027.jpg");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -172,19 +183,14 @@
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
-    color:black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color:nth($colores, 2);
+    @extend %flex;
     h1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex (flex, center, center);
         margin-bottom: 50px;
         height: 100px;
         width: 100%;
-        background-color: rgb(248, 136, 196);
+        background-color: nth($colores, 4);
     }
     form{
         @extend %flex;
@@ -216,7 +222,7 @@
         }
         .botones{
             input{
-                background-color: black;
+                background-color: nth($colores, 2);
                 color: white;
                 width: 90px;
                 height: 30px;                                
@@ -230,20 +236,18 @@
 .cursos{
     @extend %flex;
     .cursosTitulo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex (flex, center, center);
+        text-align: center;
         width: 100%;
-        height: 100px;
-        color: rgb(253, 137, 199);
-        background-color: blueviolet;
+        height: 150px;
+        color: nth($colores, 1);
+        background-color: nth($colores, 5);
         h1{
-            border: 2px solid rgb(252, 252, 89);
             padding: 5px;
         }
     }
     .cursosManicuria{
-        background-image: url("../img/manicuriaintegralcurso.webp");
+        background: linear-gradient((rgba(0, 0, 0, 0.26)), rgba(0, 0, 0, 0.322)), url("../img/manicuriaintegralcurso.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -252,24 +256,23 @@
         text-align: center;
         @extend %flex;
         h2{
-            color: blueviolet;
+            color: nth($colores, 1);
             font-size: 60px;
             margin-bottom: 50px;
         }
         a{
             text-decoration: none;
             font-size: 40px;
-            background-color: blueviolet;
-            color: palevioletred;
-            border: 2px solid palevioletred;
+            color: nth($colores, 1);
+            padding: 5px;
             transition: 1s;
             &:hover{
-                color: rgb(250, 250, 93);
+                color: nth($colores, 6);
                 transform: scale(1.1);}
         }
     }
     .cursosAcrilicas{
-        background-image: url("../img/uñasacrilicas.jpg");
+        background: linear-gradient((rgba(0, 0, 0, 0.26)), rgba(0, 0, 0, 0.322)), url("../img/uñasacrilicas.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -278,24 +281,23 @@
         text-align: center;
         @extend %flex;
         h2{
-            color: blueviolet;
+            color: nth($colores, 1);
             font-size: 60px;
             margin-bottom: 50px;
         }
         a{text-decoration: none;
             font-size: 40px;
-            background-color: blueviolet;
-            color: palevioletred;
-            border: 2px solid palevioletred;
+            color: nth($colores, 1);
+            padding: 5px;
             transition: 1s;
             &:hover{
-                color: rgb(250, 250, 93);
+                color: nth($colores, 6);
                 transform: scale(1.1);
             }
         }
     }
     .cursosSemipermanentes{
-        background-image: url("../img/semipermanentescurso.jpg");
+        background: linear-gradient((rgba(0, 0, 0, 0.26)), rgba(0, 0, 0, 0.322)), url("../img/semipermanentescurso.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -304,26 +306,25 @@
         text-align: center;
         @extend %flex;
         h2{
-            color: blueviolet;
+            color: nth($colores, 1);
             font-size: 60px;
             margin-bottom: 50px;
         }
         a{
             text-decoration: none;
             font-size: 40px;
-            background-color: blueviolet;
-            color: palevioletred;
-            border: 2px solid palevioletred;
+            color: nth($colores, 1);
+            padding: 5px;
             transition: 1s;
             &:hover{
-                color: rgb(250, 250, 93);
+                color: nth($colores, 6);
                 transform: scale(1.1);
             }
 
         }
     }
     .cursosTechgel{
-        background-image: url("../img/techgelcurso.jpg_large");
+        background: linear-gradient((rgba(0, 0, 0, 0.26)), rgba(0, 0, 0, 0.322)), url("../img/techgelcurso.jpg_large");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -332,18 +333,17 @@
         text-align: center;
         @extend %flex;
         h2{
-            color: blueviolet;
+            color: nth($colores, 1);
             font-size: 60px;
             margin-bottom: 50px;
         }
         a{text-decoration: none;
             font-size: 40px;
-            background-color: blueviolet;
-            color: palevioletred;
-            border: 2px solid palevioletred;
+            color: nth($colores, 1);
+            padding: 5px;
             transition: 1s;
             &:hover{
-                color: rgb(250, 250, 93);
+                color: nth($colores, 6);
                 transform: scale(1.1);
             }
         }
@@ -352,6 +352,7 @@
 
 /*-----------PRODUCTOS-----------*/
 .gridProductos{
+    background-color: nth($colores, 1);
     display: grid;
     width: 100%;
     margin: 0 auto;
@@ -369,13 +370,10 @@
     "acces1 acces2 acces3 acces4"
     ;
     .esmaltesTitulo{
-        background-color: blueviolet;
+        background-color: nth($colores, 5);
         grid-area: esmaltes;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h2{color: deeppink;
-            border: 2px solid yellow;
+        @include flex (flex, center, center);
+        h1{color: nth($colores, 4);
             padding: 10px;
             font-size: 50px;
         }
@@ -383,21 +381,20 @@
     .celeste{
         grid-area: celeste;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -405,21 +402,20 @@
     .negro{
         grid-area: negro;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -427,21 +423,20 @@
     .rojo{
         grid-area: rojo;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -449,34 +444,30 @@
     .rosa{
         grid-area: rosa;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
     }
     .decoracionTitulo{
-        background-color: blueviolet;
+        background-color: nth($colores, 5);
         grid-area: decoracion;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex (flex, center, center);
         h2{
-            color: deeppink;
-            border: 2px solid yellow;
+            color: nth($colores, 4);
             padding: 10px;
             font-size: 50px;
         }
@@ -485,21 +476,20 @@
     .deco1{
         grid-area: deco1;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -507,21 +497,20 @@
     .deco2{
         grid-area: deco2;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -529,21 +518,20 @@
     .deco3{
         grid-area: deco3;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -551,34 +539,30 @@
     .deco4{
         grid-area: deco4;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
     }
     .equip{
         grid-area: equip;
-        background-color: blueviolet;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: nth($colores, 5);
+        @include flex (flex, center, center);
         h2{
-            color: deeppink;
-            border: 2px solid yellow;
+            color: nth($colores, 4);
             padding: 10px;
             font-size: 50px;
         }
@@ -587,21 +571,20 @@
     .cabina{
         grid-area: cabina;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -609,21 +592,20 @@
     .torno{
         grid-area: torno;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -631,21 +613,20 @@
     .equip1{
         grid-area: equip1;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -653,34 +634,30 @@
     .equip2{
         grid-area: equip2;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
     }
     .accesoriosTitulo{
         grid-area: accesorios;
-        background-color: blueviolet;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: nth($colores, 5);
+        @include flex (flex, center, center);
         h2{
-            color: deeppink;
-            border: 2px solid yellow;
+            color: nth($colores, 4);
             padding: 10px;
             font-size: 50px;
         }
@@ -689,21 +666,20 @@
     .acces1{
         grid-area: acces1;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -711,21 +687,20 @@
     .acces2{
         grid-area: acces2;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -733,21 +708,20 @@
     .acces3{
         grid-area: acces3;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
 
@@ -755,21 +729,20 @@
     .acces4{
         grid-area: acces4;
         @extend %flex;
-        border: 2px solid deeppink;
-        background-color: yellow;
+        background-color: nth($colores, 4);
         img{
             width: 250px;
             height: 250px;
         }
         a{
             text-decoration: none;
-            color: deeppink;
+            color: nth($colores, 5);
             padding: 5px;
             margin-top: 10px;
             transition: 1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: black;
+                background-color: nth($colores, 1);
                 border-radius: 15%;}
         }
     }
@@ -778,6 +751,7 @@
 
 /*-----------TRABAJOS----------*/
 .gridTrabajos{
+    background-color: nth($colores, 1);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px repeat(5,400px);
@@ -795,266 +769,213 @@
         grid-area: trabajosTitulo;
         height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: blueviolet;
-        color: deeppink;
+        @include flex (flex, center, center);
+        background-color: nth($colores, 5);
+        color: nth($colores, 4);
         font-size: 30px;
-        border: 2px solid deeppink;
         h1{
             text-align: center;
-            border: 2px solid yellow;
         }
     }
     .trabajos1{
         grid-area: trabajos1;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosuno.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6);
+            }
         }
     }
     .trabajos2{
         grid-area: trabajos2;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosdos.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos3{
         grid-area: trabajos3;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajostres.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos4{
         grid-area: trabajos4;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajoscuatro.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos5{
         grid-area: trabajos5;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajoscinco.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos6{
         grid-area: trabajos6;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosseis.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos7{
         grid-area: trabajos7;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajossiete.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos8{
         grid-area: trabajos8;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosocho.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos9{
         grid-area: trabajos9;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosnueve.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
     .trabajos10{
         grid-area: trabajos10;
-        @extend %flex;
-        background-color: yellow;
-        border: 2px solid deeppink;
-        img{
-            width: 100%;
-            height: 92%;
-        }
+        @include flex (flex, center, end);
+        background-image: url("../img/trabajosdiez.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
         a{
             text-decoration: none;
-            margin-top: 5px;
-            color: deeppink;
-            height: 8%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 5px;
+            background-color: nth($colores, 5);
+            color: nth($colores, 4);
+            padding: 5px;
+            border-radius: 10%;
+            @include flex (flex, center, center);
             transition: 1s;
             &:hover{
                 transform: scale(1.05);
-                background-color: black;
-                border-radius: 15%;
-                padding: 5px;}
+                color: nth($colores, 6)}
         }
     }
 }

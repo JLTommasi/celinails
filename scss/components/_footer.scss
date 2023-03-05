@@ -1,6 +1,6 @@
 /*-------FOOTER--------*/
 footer{
-    background-color: rgb(80, 165, 250);
+    background-color: nth($colores, 1);
     @include flex (flex, space-between, center);
     padding: 20px;
     .texto{
@@ -8,11 +8,13 @@ footer{
         h2{
             font-family: 'Rowdies', cursive;
             font-size: 30px;
+            color: nth($colores, 2);
 
         }
         p{
             font-family: 'Rowdies', cursive;
             font-size: 20px;
+            color: nth($colores, 2);
         }
     }
     iframe{
